@@ -24,23 +24,20 @@ NachOS 的建置流程是 32-bit x86，且寫死了 `/usr/local/nachos/...` 與 
 ## 快速開始
 
 ```bash
-git clone git@github.com:xinshoutw/machos-on-docker.git
+git clone https://github.com/xinshoutw/machos-on-docker.git
 cd machos-on-docker
 
-git clone https://github.com/wynn1212/NachOS NachOS   # 上游原始碼，不含在本 repo
-docker compose up -d --build
+git clone https://github.com/wynn1212/NachOS NachOS # Upstream Repo
+docker compose up -d
 docker compose exec nachos bash
-```
 
-進到容器後：
-
-```bash
 cd /work/NachOS/code
-make                                  # 第一次要幾分鐘
-./userprog/nachos -e ./test/test1
+make # May take a few minutes
+
+./userprog/nachos -e ./test/test1 # Run
 ```
 
-看到這段就代表環境沒問題：
+Expected Output:
 
 ```
 Print integer:9
@@ -60,6 +57,7 @@ return value:0
 | `docker compose exec nachos bash` | 進容器 |
 | `docker compose stop` | 停止 |
 | `docker compose down` | 停止並移除容器 |
+| `docker compose pull` | 更新到最新的 image |
 
 程式碼在 host 的 `NachOS/`，`down` 只砍容器，不會動到程式碼。
 

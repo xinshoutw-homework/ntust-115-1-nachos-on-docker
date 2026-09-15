@@ -25,23 +25,20 @@ usual editor, build and run inside the container.
 ## Quick Start
 
 ```bash
-git clone git@github.com:xinshoutw/machos-on-docker.git
+git clone https://github.com/xinshoutw/machos-on-docker.git
 cd machos-on-docker
 
-git clone https://github.com/wynn1212/NachOS NachOS   # upstream source, not vendored here
-docker compose up -d --build
+git clone https://github.com/wynn1212/NachOS NachOS # Upstream Repo
+docker compose up -d
 docker compose exec nachos bash
-```
 
-Then inside the container:
-
-```bash
 cd /work/NachOS/code
-make                                  # a few minutes on the first run
-./userprog/nachos -e ./test/test1
+make # May take a few minutes
+
+./userprog/nachos -e ./test/test1 # Run
 ```
 
-This output means the environment works:
+Expected Output:
 
 ```
 Print integer:9
@@ -61,6 +58,7 @@ return value:0
 | `docker compose exec nachos bash` | Get a shell |
 | `docker compose stop` | Stop |
 | `docker compose down` | Stop and remove the container |
+| `docker compose pull` | Update to the latest image |
 
 Your code lives in `NachOS/` on the host. `down` only removes the container, never your code.
 
