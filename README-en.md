@@ -96,6 +96,7 @@ finishes assembling normally.
 
 | Symptom | Fix |
 |---|---|
+| `Value too large for defined data type` | The 1996 cross compiler is 32-bit without large-file support, so it cannot stat inodes above 2³². On Windows, keep the repo inside the WSL2 Linux filesystem (`~/` within WSL), not under `C:\`. Confirm with `docker compose exec nachos stat -c '%i' /work`: a value above 4294967295 is this bug |
 | `rosetta error: failed to open elf at /lib/ld-linux.so.2` | Rosetta only supports 64-bit x86 and cannot run the 32-bit cross compiler. Docker Desktop → Settings → General, uncheck **Use Rosetta for x86_64/amd64 emulation**, Apply & restart |
 | `exec format error` | Missing the amd64 binfmt handler. Update and restart Docker |
 | `/lib/cpp: No such file or directory` | You are not running inside the container |

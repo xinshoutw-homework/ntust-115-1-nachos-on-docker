@@ -94,6 +94,7 @@ strt.s:1: Warning: Line numbers must be positive; line number 0 rejected.
 
 | 症狀 | 處理 |
 |---|---|
+| `Value too large for defined data type` | 1996 年的 cross compiler 是 32-bit 且不支援 LFS，stat 不了大於 2³² 的 inode。Windows 上請把 repo 放進 WSL2 的 Linux 檔案系統（WSL 裡的 `~/`），不要放在 `C:\` 底下。用 `docker compose exec nachos stat -c '%i' /work` 確認，數字超過 4294967295 就是這個問題 |
 | `rosetta error: failed to open elf at /lib/ld-linux.so.2` | Rosetta 只支援 64-bit x86，跑不動 32-bit cross compiler。Docker Desktop → Settings → General，取消勾選 **Use Rosetta for x86_64/amd64 emulation**，Apply & restart |
 | `exec format error` | 缺 amd64 的 binfmt handler，更新並重啟 Docker |
 | `/lib/cpp: No such file or directory` | 沒有在容器裡跑 |
