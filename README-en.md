@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://hub.docker.com/_/ubuntu)
 [![Platform](https://img.shields.io/badge/platform-linux%2Famd64-555555?style=for-the-badge)](https://docs.docker.com/build/building/multi-platform/)
-[![License](https://img.shields.io/github/license/xinshoutw/machos-on-mac?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/github/license/xinshoutw/machos-on-docker?style=for-the-badge)](LICENSE)
 
 [繁體中文](README.md) | **English**
 
@@ -25,8 +25,8 @@ usual editor, build and run inside the container.
 ## Quick Start
 
 ```bash
-git clone git@github.com:xinshoutw/machos-on-mac.git
-cd machos-on-mac
+git clone git@github.com:xinshoutw/machos-on-docker.git
+cd machos-on-docker
 
 git clone https://github.com/wynn1212/NachOS NachOS   # upstream source, not vendored here
 docker compose up -d --build
