@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: nachos
+    image: ghcr.io/xinshoutw/machos-on-docker:latest
     container_name: nachos
     platform: linux/amd64
     working_dir: /work
