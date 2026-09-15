@@ -1,0 +1,17 @@
+services:
+  nachos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nachos
+    container_name: nachos
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: sleep infinity
+    stdin_open: true
+    tty: true
+    init: true
+    restart: unless-stopped
+

@@ -1,0 +1,4 @@
+# 使用者各自的 NachOS 作業程式碼（自行 clone 上游，內含獨立的 .git）
+NachOS/
+
+.DS_Store
