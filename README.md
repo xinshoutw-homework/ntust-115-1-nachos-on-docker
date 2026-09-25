@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://hub.docker.com/_/ubuntu)
 [![Platform](https://img.shields.io/badge/platform-linux%2Famd64-555555?style=for-the-badge)](https://docs.docker.com/build/building/multi-platform/)
-[![License](https://img.shields.io/github/license/xinshoutw/nachos-on-docker?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/github/license/xinshoutw-homework/ntust-115-1-nachos-on-docker?style=for-the-badge)](LICENSE)
 
 **繁體中文** | [English](README-en.md)
 
@@ -24,8 +24,8 @@ NachOS 的建置流程是 32-bit x86，且寫死了 `/usr/local/nachos/...` 與 
 ## 快速開始
 
 ```bash
-git clone https://github.com/xinshoutw/nachos-on-docker.git
-cd nachos-on-docker
+git clone https://github.com/xinshoutw-homework/ntust-115-1-nachos-on-docker.git
+cd ntust-115-1-nachos-on-docker
 
 git clone https://github.com/wynn1212/NachOS NachOS # Upstream Repo
 docker compose up -d
